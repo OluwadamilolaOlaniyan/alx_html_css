@@ -1,0 +1,59 @@
+/* Reset / sensible defaults */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Make the viewport-height layout so flex sizing works predictably */
+html, body {
+  height: 100%;
+}
+
+/* Body is a column flex container: header / main / footer stacked */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;       /* use the full viewport height */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Header and footer behave as non-flexing items (natural height) */
+header, footer {
+  padding: 1rem;
+  flex: none;
+  background: #4c9ca5;
+  border-bottom: 1px solid #a0dbe0;
+}
+
+/* Main is a flex row container holding article + aside */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;          /* keeps automatic height & width; expands to fill available space */
+  min-height: 0;       /* IMPORTANT: allows children with overflow to scroll inside */
+}
+
+/* Article should take 2/3 while aside gets 1/3 */
+article {
+  flex: 2;             /* takes 2 parts */
+  padding: 1rem;
+  overflow-y: auto;    /* enable vertical scrolling inside the article */
+  min-width: 0;        /* prevents overflow from expanding the flex item */
+  background: #ffffff;
+}
+
+aside {
+  flex: 1;             /* takes 1 part */
+  padding: 1rem;
+  overflow-y: auto;    /* enable vertical scrolling inside the aside */
+  min-width: 0;
+  background: #fafafa;
+  border-left: 1px solid #eaeaea;
+}
+
+/* Optional: small visual spacing for footer */
+footer {
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Small helpers for demo content length */
+.article-demo, .aside-demo {
+  padding-bottom: 2rem;
+}

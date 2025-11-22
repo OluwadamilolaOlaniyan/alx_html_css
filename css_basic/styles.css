@@ -18,8 +18,8 @@ body {
 header, footer {
   padding: 1rem;
   flex: none;
-  background: #4c9ca5;
-  border-bottom: 1px solid #a0dbe0;
+  background: #68c6c0;
+  border-bottom: 1px solid #60a0a2;
 }
 
 /* Main is a flex row container holding article + aside */
@@ -45,7 +45,7 @@ aside {
   overflow-y: auto;    /* enable vertical scrolling inside the aside */
   min-width: 0;
   background: #fafafa;
-  border-left: 1px solid #eaeaea;
+  border-left: 1px solid #60a0a2;
 }
 
 /* Optional: small visual spacing for footer */

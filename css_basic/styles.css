@@ -48,6 +48,34 @@ aside {
   border-left: 1px solid #60a0a2;
 }
 
+.learners-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+.learners-table thead th {
+  background: linear-gradient(180deg,#f7f9f9,#f2f6f6);
+  color: #213f40;
+  font-weight: 700;
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+}
+.learners-table tbody td {
+  padding: 0.65rem 0.75rem;
+  border-top: 1px solid rgba(34,34,34,0.04);
+}
+.learners-table tbody tr:nth-child(even) td {
+  background: #fbfbfb;
+
+/* Make paragraphs easier to read */
+article p {
+  margin-bottom: 1rem;
+  color: rgba(0,0,0,0.85);
+}
 /* Optional: small visual spacing for footer */
 footer {
   border-top: 1px solid #e0e0e0;

@@ -126,6 +126,12 @@ nav a:active {
   flex: 1 1 200px;
   text-align: center;
   padding: 20px;
+  transition: transfrom 0.4s ease, opacity 0.4s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05) rotate(-1deg);
+  opacity: 0.9;
 }
 
 .feature span {
@@ -181,6 +187,11 @@ nav a:active {
 
 .result {
   text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.result:hover {
+  transform: translateY(-10px) scale(1.05);
 }
 
 .result .badge {
